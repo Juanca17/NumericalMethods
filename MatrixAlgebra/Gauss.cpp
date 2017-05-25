@@ -1,4 +1,3 @@
-#include <iostream>
 #include <iomanip>
 using namespace std;
 
@@ -12,7 +11,7 @@ int main() {
 										{0.1,7,-0.3, -19.3},
 										{0.3,-0.2,10, 71.4}};
 
-	printf ("\nMatrix Algebra by Gauss method\n");
+	printf("\nMatrix Algebra by Gauss method\n");
 
   gauss(A);
 

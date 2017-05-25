@@ -15,7 +15,7 @@ int main() {
   int maxIterations = 100;
 
 
-  printf ("\nMatrix Algebra by Gauss–Seidel method\n");
+  printf("\nMatrix Algebra by Gauss–Seidel method\n");
 
   gauss_seidel(a, b, tolerance, maxIterations);
 
@@ -43,12 +43,12 @@ void gauss_seidel(double a[][n], double b[], double tolerance, int maxIterations
       }
     }
 
-    e1 = b[0] - ((a[0][0]*y[0]) + (a[0][1]*y[1]) + (a[0][2]*y[2]));
-    e2 = b[1] - ((a[1][0]*y[0]) + (a[1][1]*y[1]) + (a[1][2]*y[2]));
-    e3 = b[2] - ((a[2][0]*y[0]) + (a[2][1]*y[1]) + (a[2][2]*y[2]));
+    e1 = b[0] - fabs((a[0][0]*y[0]) + (a[0][1]*y[1]) + (a[0][2]*y[2]));
+    e2 = b[1] - fabs((a[1][0]*y[0]) + (a[1][1]*y[1]) + (a[1][2]*y[2]));
+    e3 = b[2] - fabs((a[2][0]*y[0]) + (a[2][1]*y[1]) + (a[2][2]*y[2]));
 
     if (iteration > maxIterations) {
-      printf ("\n\nThe maximum amount of allowed iterations was exceeded\n\n");
+      printf("\n\nThe maximum amount of allowed iterations was exceeded\n\n");
       return;
     }
 

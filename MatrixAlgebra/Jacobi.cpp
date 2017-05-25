@@ -1,6 +1,5 @@
 #include <iomanip>
 #include <cmath>
-
 using namespace std;
 
 const int n = 3;
@@ -16,7 +15,7 @@ int main() {
 					tolerance = 0.000001;
 	int maxIterations = 100;
 
-	printf ("\nMatrix Algebra by Jacobi method\n");
+	printf("\nMatrix Algebra by Jacobi method\n");
 
 	jacobi(a, b, tolerance, maxIterations);
 
@@ -43,7 +42,7 @@ void jacobi (double a[][n], double b[], double tolerance, int maxIterations) {
 		e3 = fabs(a[2][0] * x1 + a[2][1] * x2 + a[2][2] * x3 - b[2]);
 
 		if (iteration > maxIterations) {
-      printf ("\n\nThe maximum amount of allowed iterations was exceeded\n\n");
+      printf("\n\nThe maximum amount of allowed iterations was exceeded\n\n");
       return;
     }
 
